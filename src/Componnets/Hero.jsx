@@ -20,7 +20,7 @@ const typewriterWords = [
 
 const Hero = () => {
   return (
-    <section className="pt-28 max-w-6xl mx-auto bg-custom-dark-blue text-white p-3 flex flex-col-reverse md:flex-row gap-5 items-center md:justify-between">
+    <section className="pt-28 max-w-6xl mx-auto bg-custom-dark-blue text-white p-3 flex flex-col-reverse md:flex-row gap-5 items-center md:justify-between relative">
       <div className="flex flex-col sm:gap-2 leading-loose tracking-wide">
         <p className="text-xl sm:text-2xl mb-2 font-medium">Hello there! I'm</p>
         <h1 className="text-4xl sm:text-5xl mb-2 font-bold">Salait Sudhakar</h1>
@@ -69,6 +69,7 @@ const Hero = () => {
         </a>
       </div>
 
+      {/* Hero Image */}
       <div>
         <img
           src={heroImage}
