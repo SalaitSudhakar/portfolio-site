@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Circular background -->
+  <circle cx="32" cy="32" r="32" fill="#191F36" />
+
+  <!-- Centered text with larger "S" -->
+  <text x="50%" y="50%" font-family="Poppins, sans-serif" font-size="20" fill="#7AE2CF" font-weight="bold"
+        text-anchor="middle" dominant-baseline="middle">
+    &lt;/<tspan font-size="32" font-weight="bold">S</tspan>&gt;
+  </text>
+</svg>
