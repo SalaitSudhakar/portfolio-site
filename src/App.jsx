@@ -1,16 +1,13 @@
-import React from 'react';
-
-import Navbar from './Componnets/Navbar';
-import Hero from './Componnets/Hero';
+import React from "react";
+import Navbar from "./Componnets/Navbar";
+import Hero from "./Componnets/Hero";
+import "./App.css";
 
 const App = () => {
   return (
-    <div className="bg-[#191c36] min-h-screen pt-52">
-
-   
+    <div className="bg-custom-dark-blue min-h-screen">
       <Navbar />
       <Hero />
-   
     </div>
   );
 };
