@@ -4,7 +4,8 @@ import Hero from "./Componnets/Hero";
 import "./App.css";
 import About from "./Componnets/About";
 import Skills from "./Componnets/Skills";
-
+import Contact from './Componnets/Contact';
+import Footer from './Componnets/Footer'
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
       <Hero />
       <About />
       <Skills />
+      <Contact />
+      <Footer />
     </div>
   );
 };

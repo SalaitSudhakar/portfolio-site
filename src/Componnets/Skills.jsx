@@ -82,14 +82,15 @@ const Skills = () => {
     },
   ];
 
-
-
   return (
-    <section id="skills" className="max-w-6xl mx-auto px-4 md:px-5 lg:px-8 py-24">
+    <section
+      id="skills"
+      className="max-w-6xl mx-auto px-4 md:px-5 lg:px-8 py-24"
+    >
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         viewport={{ once: true }}
         className="text-4xl lg:text-5xl font-semibold text-center mb-12"
       >
@@ -99,22 +100,30 @@ const Skills = () => {
         </span>
       </motion.h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-12 md:gap-16 lg:gap-18 ">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-12 md:gap-16 lg:gap-18">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className={`p-3 rounded-lg bg-gray-800 flex flex-col items-center justify-center ${skill.shadow} hover:scale-105 transition-all duration-300 `}
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: (Math.floor(index / 4)) + 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            transition={{
+              duration: 0.5,
+              ease: 'easeInOut',
+              delay: 0.1 + index * 0.08, // Smaller, more nuanced staggered delay
+            }}
             viewport={{ once: true }}
+            className={`group p-3 rounded-lg bg-gray-800 flex flex-col items-center justify-center ${skill.shadow} hover:scale-110 border border-transparent hover:box-glow hover:custom-bg-teal transition-all duration-300`}
           >
-            <div className={`text-4xl mb-2 ${skill.textColor} ${(skill.name === 'ExpressJS' && "p-2 bg-white rounded-full")}`}>
+            <div
+              className={`text-4xl mb-2 ${skill.textColor} ${
+                skill.name === "ExpressJS" && "p-2 bg-white rounded-full"
+              }`}
+            >
               {skill.icon}
             </div>
 
             <motion.p
-              className={`text-sm sm:text-base font-medium mt-2 text-white`}
+              className={`text-sm sm:text-base font-medium mt-2 text-white group-hover:text-gray-800`}
             >
               {skill.name}
             </motion.p>

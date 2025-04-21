@@ -7,9 +7,21 @@ import { FiDownload } from "react-icons/fi";
 import "../App.css";
 
 const socialLinks = [
-  { href: "", icon: FaLinkedinIn, ariaLabel: "LinkedIn Profile" },
-  { href: "", icon: FaGithub, ariaLabel: "GitHub Profile" },
-  { href: "", icon: MdEmail, ariaLabel: "Email Contact" },
+  {
+    href: "https://www.linkedin.com/in/salaitsudhakar",
+    icon: FaLinkedinIn,
+    ariaLabel: "LinkedIn Profile",
+  },
+  {
+    href: "https://github.com/SalaitSudhakar",
+    icon: FaGithub,
+    ariaLabel: "GitHub Profile",
+  },
+  {
+    href: "mailto:saletsudhakar@gmail.com",
+    icon: MdEmail,
+    ariaLabel: "Email Contact",
+  },
 ];
 
 const Hero = () => {
@@ -72,6 +84,8 @@ const Hero = () => {
             <a
               key={index}
               href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={link.ariaLabel}
               className="p-2 rounded-full border border-teal-500 text-teal-500 bg-transparent hover:box-glow transition-all duration-300 hover:custom-bg-teal hover:text-gray-700"
             >
