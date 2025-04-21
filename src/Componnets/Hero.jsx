@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="pt-28 pb-20 max-w-6xl mx-auto p-3 flex flex-col-reverse md:flex-row gap-5 items-center md:justify-between relative"
+      className="pt-28 pb-20 max-w-6xl mx-auto px-4 md:px-5 lg:px-8 flex flex-col-reverse md:flex-row gap-5 items-center md:justify-between relative"
     >
       {/* Left Content - Animated */}
       <div className="flex flex-col flex-1 gap-2 leading-loose tracking-wide">
