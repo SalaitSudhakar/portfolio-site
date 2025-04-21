@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
@@ -6,11 +6,47 @@ const Navbar = () => {
 
   const navLinks = ["home", "about", "skills", "projects", "contact"];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // Get all sections
+      const sections = navLinks.map(section => 
+        document.getElementById(section)
+      ).filter(Boolean);
+      
+      // Check which section is in viewport
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100; // Offset for navbar height
+        const sectionHeight = section.offsetHeight;
+        
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute("id");
+        }
+      });
+      
+      // Update active section if needed
+      if (current && current !== activeSection) {
+        setActiveSection(current);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+    
+    // Call once on component mount to set initial active section
+    handleScroll();
+    
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }); // Include activeSection in dependencies
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-custom-dark-blue shadow-md shadow-white/20">
       <div className="max-w-7xl mx-auto flex gap-1  items-center justify-between text-white font-semibold px-3 sm:px-6 py-3 text-xl">
         <div className="font-bold text-teal-500 whitespace-nowrap tracking-tighter">
-          {"</"} <span className="text-4xl">S</span> {">"}
+          {"<"} <span className="text-4xl">S</span> {"/>"}
         </div>
 
         {/* Desktop Nav */}

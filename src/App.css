@@ -39,9 +39,10 @@ html {
     background-color: #191c36;
   }
 
-  .animate-slow-bounce {
-    animation: bounce 3s infinite;
+  .bg-custom-gray {
+    background: #242749;
   }
+
 
   /* Add wiggle-down animation */
   .animate-wiggle-down {

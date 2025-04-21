@@ -1,10 +1,10 @@
 import React, { memo } from "react";
-import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 import heroImage from "../assets/hero.png";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import "../App.css";
 import { FiDownload } from "react-icons/fi";
+import "../App.css";
 
 const socialLinks = [
   { href: "", icon: FaLinkedinIn, ariaLabel: "LinkedIn Profile" },
@@ -12,39 +12,62 @@ const socialLinks = [
   { href: "", icon: MdEmail, ariaLabel: "Email Contact" },
 ];
 
-const typewriterWords = [
-  "Full-Stack Developer",
-  "MERN Stack Specialist",
-  "UI/UX Enthusiast",
-];
-
 const Hero = () => {
   return (
-    <section className="pt-28 max-w-6xl mx-auto bg-custom-dark-blue text-white p-3 flex flex-col-reverse md:flex-row gap-5 items-center md:justify-between relative">
-      <div className="flex flex-col sm:gap-2 leading-loose tracking-wide">
-        <p className="text-xl sm:text-2xl mb-2 font-medium">Hello there! I'm</p>
-        <h1 className="text-4xl sm:text-5xl mb-2 font-bold">Salait Sudhakar</h1>
+    <section
+      id="home"
+      className="pt-28 pb-20 max-w-6xl mx-auto bg-custom-dark-blue text-white p-3 flex flex-col-reverse md:flex-row gap-5 items-center md:justify-between relative"
+    >
+      {/* Left Content - Animated */}
+      <div className="flex flex-col flex-1 gap-2 leading-loose tracking-wide">
+        <motion.p
+          className="text-xl sm:text-2xl mb-2 font-medium"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+        >
+          Hello there! I'm
+        </motion.p>
 
-        <div className="text-4xl sm:text-5xl font-bold min-h-[3rem] sm:min-h-[4rem]">
-          <span className="text-2xl">a </span>
-          <span className="text-teal-500">
-            <Typewriter
-              words={typewriterWords}
-              loop={true}
-              cursor
-              cursorStyle="|"
-              typeSpeed={100}
-              deleteSpeed={75}
-              delaySpeed={1500}
-            />
-          </span>
-        </div>
+        <motion.h1
+          className="text-4xl sm:text-5xl mb-2 font-bold"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Salait Sudhakar
+        </motion.h1>
 
-        <p className="mt-3 sm:text-lg tracking-wide text-gray-300">
+        <motion.div
+          className="text-4xl sm:text-5xl font-bold min-h-[3rem] sm:min-h-[4rem]"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <span className="text-4xl sm:text-5xl">I'm a </span>
+          <span className="text-teal-500">MERN Stack Developer</span>
+        </motion.div>
+
+        <motion.p
+          className="sm:text-lg tracking-wide text-gray-300"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          viewport={{ once: true }}
+        >
           Transforming ideas into responsive and efficient web applications.
-        </p>
+        </motion.p>
 
-        <div className="flex gap-6 my-5">
+        <motion.div
+          className="flex gap-6 my-5 flex-1"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
+          viewport={{ once: true }}
+        >
           {socialLinks.map((link, index) => (
             <a
               key={index}
@@ -55,29 +78,38 @@ const Hero = () => {
               <link.icon size={23} />
             </a>
           ))}
-        </div>
+        </motion.div>
 
-        <a
+        <motion.a
           href="/salait_sudhakar_resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download="Salait_Sudhakar_Resume.pdf"
-          className="p-2 flex gap-2 w-64 items-center justify-center font-bold border cursor-pointer border-teal-500 text-gray-800 box-glow rounded-full bg-teal-500 hover:border-teal-500 hover:text-teal-500 hover:bg-transparent transition-all duration-300 hover:null-box-glow"
+          className="p-2 flex gap-2 w-64 items-center animate-wiggle-down justify-center font-bold border cursor-pointer border-teal-500 text-gray-800 box-glow rounded-full bg-teal-500 hover:border-teal-500 hover:text-teal-500 hover:bg-transparent transition-all duration-300 hover:null-box-glow"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}
+          viewport={{ once: true }}
         >
           <span>Download Resume</span>
-          <FiDownload size={18} className="font-bold animate-wiggle-down" />
-        </a>
+          <FiDownload size={18} className="font-bold " />
+        </motion.a>
       </div>
 
-      {/* Hero Image */}
-      <div>
+      {/* Hero Image - Animated */}
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: true }}
+      >
         <img
           src={heroImage}
           alt="A young man working on a laptop sitting on a gaming chair"
-          className="h-[400px] w-[300px] md:h-[600px] md:w-[450px]"
+          className="h-[380px] w-[270px] sm:h-[400px] sm:w-[300px] md:h-[580px] md:w-[430px]"
           loading="eager"
         />
-      </div>
+      </motion.div>
     </section>
   );
 };
