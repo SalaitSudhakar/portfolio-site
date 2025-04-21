@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import heroImage from "../assets/hero.png";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="pt-28 pb-20 max-w-6xl mx-auto bg-custom-dark-blue text-white p-3 flex flex-col-reverse md:flex-row gap-5 items-center md:justify-between relative"
+      className="pt-28 pb-20 max-w-6xl mx-auto p-3 flex flex-col-reverse md:flex-row gap-5 items-center md:justify-between relative"
     >
       {/* Left Content - Animated */}
       <div className="flex flex-col flex-1 gap-2 leading-loose tracking-wide">
@@ -114,4 +114,4 @@ const Hero = () => {
   );
 };
 
-export default memo(Hero);
+export default Hero;

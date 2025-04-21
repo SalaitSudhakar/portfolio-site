@@ -10,12 +10,92 @@ html {
 
 @layer utilities {
   .box-glow {
-    box-shadow: 0 0 10px 4px rgba(63, 186, 194, 0.7);
+    box-shadow: 0 0 10px 4px rgba(63, 186, 194, 0.5);
+  }
+
+  .html-box-glow {
+    box-shadow: 0 0 7px 3px rgba(241, 101, 41, 0.5);
+  }
+
+  .html-text-color {
+    color: #F16529;
+  }
+
+  .css-box-glow {
+    box-shadow: 0 0 7px 3px rgba(3, 155, 229, 0.5);
+  }
+
+  .css-text-color {
+    color: #039BE5;
+  }
+
+  .tailwind-box-glow {
+    box-shadow: 0 0 7px 3px rgba(68, 168, 179, 0.5);
+  }
+
+  .tailwind-text-color {
+    color: #44A8B3;
+  }
+
+  .javascript-box-glow {
+    box-shadow: 0 0 7px 3px rgba(255, 214, 0, 0.5);
+  }
+
+  .javascript-text-color {
+    color: #FFD600;
+  }
+
+  .react-box-glow {
+    box-shadow: 0 0 7px 3px rgba(0, 215, 255, 0.5);
+  }
+
+  .react-text-color {
+    color: #00D7FF;
+  }
+
+  .nodejs-box-glow {
+    box-shadow: 0 0 7px 3px rgba(140, 200, 75, 0.5);
+  }
+
+  .nodejs-text-color {
+    color: #8CC84B;
+  }
+
+  .express-box-glow {
+    box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.5);
+  }  
+
+  .mongodb-box-glow {
+    box-shadow: 0 0 7px 3px rgba(76, 175, 80, 0.5);
+  }
+
+  .mongodb-text-color {
+    color: #4CAF50;
+  }
+
+  .mysql-box-glow {
+    box-shadow: 0 0 7px 3px rgba(66, 117, 156, 0.5);
+  }
+
+  .mysql-text-color {
+    color: #42759C
+  }
+
+  .git-box-glow {
+    box-shadow: 0 0 7px 3px rgba(232, 78, 49, 0.5);
+  }
+
+  .git-text-color {
+    color: #E84E31;
+  }
+
+  .github-box-glow {
+    box-shadow: 0 0 7px 3px rgba(255, 255, 255, 0.5);
   }
 
   /* Add hover variant */
   .hover\:box-glow:hover {
-    box-shadow: 0 0 10px 4px rgba(63, 186, 194, 0.7);
+    box-shadow: 0 0 10px 4px rgba(63, 186, 194, 0.5);
   }
 
   /* Corrected null-box-glow class */
@@ -43,14 +123,18 @@ html {
     background: #242749;
   }
 
-
   /* Add wiggle-down animation */
   .animate-wiggle-down {
     animation: wiggle-down 3s infinite;
   }
 
   @keyframes wiggle-down {
-    0%, 100% { transform: translateY(-5px); }
-    50% { transform: translateY(0); }
+    0%,
+    100% {
+      transform: translateY(-5px);
+    }
+    50% {
+      transform: translateY(0);
+    }
   }
 }

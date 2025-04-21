@@ -3,14 +3,16 @@ import Navbar from "./Componnets/Navbar";
 import Hero from "./Componnets/Hero";
 import "./App.css";
 import About from "./Componnets/About";
+import Skills from "./Componnets/Skills";
 
 
 const App = () => {
   return (
-    <div className="bg-custom-dark-blue min-h-screen">
+    <div className="bg-custom-dark-blue min-h-screen text-white overflow-x-hidden">
       <Navbar />
       <Hero />
       <About />
+      <Skills />
     </div>
   );
 };
