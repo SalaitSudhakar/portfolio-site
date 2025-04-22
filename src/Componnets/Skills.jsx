@@ -88,10 +88,10 @@ const Skills = () => {
       className="max-w-6xl mx-auto px-4 md:px-5 lg:px-8 py-24"
     >
       <motion.h1
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
         className="text-4xl lg:text-5xl font-semibold text-center mb-12"
       >
         <span className="text-teal-500 text-3xl lg:text-4xl">{"<"}</span>My{" "}
@@ -100,15 +100,15 @@ const Skills = () => {
         </span>
       </motion.h1>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-12 md:gap-16 lg:gap-18">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10 md:gap-16 lg:gap-18">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: (Math.floor(index / 4)) + 20 }}
+            initial={{ opacity: 0, y: Math.floor(index / 4) + 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.5,
-              ease: 'easeInOut',
+              ease: "easeInOut",
               delay: 0.1 + index * 0.08, // Smaller, more nuanced staggered delay
             }}
             viewport={{ once: true }}

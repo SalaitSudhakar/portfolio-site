@@ -99,7 +99,7 @@ const Hero = () => {
           target="_blank"
           rel="noopener noreferrer"
           download="Salait_Sudhakar_Resume.pdf"
-          className="p-2 flex gap-2 w-64 items-center animate-wiggle-down justify-center font-bold border cursor-pointer border-teal-500 text-gray-800 box-glow rounded-full bg-teal-500 hover:border-teal-500 hover:text-teal-500 hover:bg-transparent transition-all duration-300 hover:null-box-glow"
+          className="p-2 flex gap-2 w-64 items-center animate-wiggle-down justify-center font-bold border cursor-pointer border-teal-500 text-gray-800 box-glow rounded-full bg-teal-500 hover:border-teal-500 hover:text-teal-500 hover:bg-transparent transition-all duration-300 "
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 1 }}

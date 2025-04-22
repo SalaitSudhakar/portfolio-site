@@ -3,7 +3,6 @@ import "../App.css";
 import { FaAngleUp } from "react-icons/fa";
 
 const MoveToTop = ({ activeSection }) => {
-
   const moveToTop = () => {
     window.scrollTo({
       top: 0,
@@ -11,17 +10,17 @@ const MoveToTop = ({ activeSection }) => {
     });
   };
 
-  const isVisible = activeSection !== 'hero';
+  const isVisible = activeSection !== "home";
 
   return (
-    <div className={`${isVisible ? 'opacity-100 fixed bottom-10 right-2' : 'opacity-0'} transition-all duration-300`}>
-      <button
-        onClick={moveToTop}
-        className="p-1.5 box-glow bg-teal-500 cursor-pointer text-gray-700 rounded-full"
-      >
-        <FaAngleUp size={30} />
-      </button>
-    </div>
+    <button
+      onClick={moveToTop}
+      className={`${
+        isVisible ? "opacity-100 fixed bottom-10 right-2" : "opacity-0"
+      } transition-all duration-300 p-1.5 box-glow bg-teal-500 cursor-pointer text-gray-700 rounded-full hover:border hover:border-teal-500 hover:bg-transparent hover:text-teal-500 z-50`}
+    >
+      <FaAngleUp size={30} />
+    </button>
   );
 };
 
