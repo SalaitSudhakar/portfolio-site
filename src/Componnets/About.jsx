@@ -26,7 +26,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="flex-1 text-lg md:text-xl z-10"
+            className="flex-1  md:text-xl z-10"
           >
             <p className="mb-4">
               I’m a Full Stack Developer specialized in the MERN stack (
@@ -42,7 +42,7 @@ const About = () => {
               I enjoy solving real-world problems by turning ideas into
               functional, performant solutions.
             </p>
-            <p className="">
+            <p>
               Currently, I’m expanding my knowledge in web development and
               seeking opportunities in companies that value creativity,
               innovation, and tech-driven growth.

@@ -41,7 +41,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-custom-dark-blue px-4 md:px-5 lg:px-0 py-24"
+      className="bg-custom-dark-blue px-3 md:px-5 lg:px-0 py-24"
     >
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
