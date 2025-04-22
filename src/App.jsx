@@ -7,6 +7,7 @@ import Skills from "./Componnets/Skills";
 import Contact from './Componnets/Contact';
 import Footer from './Componnets/Footer'
 import MoveToTop from "./Componnets/MoveToTop";
+import Projects from "./Componnets/Projects";
 
 const App = () => {
    const [activeSection, setActiveSection] = useState("home");
@@ -18,6 +19,7 @@ const App = () => {
       <Hero />
       <About />
       <Skills />
+      <Projects />
       <Contact />
       <Footer />
     </div>
