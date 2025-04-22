@@ -55,7 +55,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="group relative flex-1 min-w-0 flex justify-center"
+            className="group relative flex-1 flex justify-center"
           >
             {/* Layer 2 - farthest background */}
             <div className=" absolute w-[270px] sm:w-[320px] h-[380px] sm:h-[480px] bg-slate-700 rounded-lg rotate-12 group-hover:rotate-0  z-0 shadow-lg transition-all transform duration-300 delay-100 eas-in-out" />
