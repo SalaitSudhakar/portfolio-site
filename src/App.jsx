@@ -6,11 +6,13 @@ import About from "./Componnets/About";
 import Skills from "./Componnets/Skills";
 import Contact from './Componnets/Contact';
 import Footer from './Componnets/Footer'
+import MoveToTop from "./Componnets/MoveToTop";
 
 const App = () => {
   return (
     <div className="bg-custom-dark-blue min-h-screen text-white overflow-x-hidden">
       <Navbar />
+      <MoveToTop />
       <Hero />
       <About />
       <Skills />
