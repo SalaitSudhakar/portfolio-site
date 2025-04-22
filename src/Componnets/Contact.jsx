@@ -12,7 +12,6 @@ const Contact = () => {
   const [successMsg, setSuccessMsg] = useState("");
 
   const handleChange = (e) => {
-    console.log(formData);
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
