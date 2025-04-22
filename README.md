@@ -16,10 +16,6 @@ Welcome to my personal portfolio repository! This project showcases my skills, e
 - React
 - Tailwind CSS
 
-## 📷 Screenshots
-
-[Consider adding screenshots of your portfolio here when available]
-
 ## 🛠️ Setup & Installation
 
 1.Clone this repository
