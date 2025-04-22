@@ -27,7 +27,7 @@ git clone https://github.com/SalaitSudhakar/portfolio-site.git
 2.Navigate to the project directory
 
 ```
-cd portfolio
+cd portfolio-site
 ```
 
 3.Install dependencies
@@ -46,12 +46,12 @@ npm run dev
 
 ## 🚀 Deployment
 
-This portfolio is deployed on Netlify. The live version can be viewed at [your-portfolio-url].
+This portfolio is deployed on Netlify. The live version can be viewed [here](https://salaitsudhakar.netlify.app/).
 
 
 ## 👨‍💻 Author
 
-- Your Name
+- Salait Sudhakar
 - [GitHub](https://github.com/SalaitSudhakar)
 - [LinkedIn](https://linkedin.com/in/salaitsudhakar)
 
