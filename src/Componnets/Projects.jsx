@@ -100,7 +100,7 @@ const Projects = () => {
                     <FaLink /> <span>Demo</span>
                   </a>
                   {/* Tooltip */}
-                  <span className="absolute bottom-full mb-2 px-2 py-1 rounded bg-white/70 text-gray-800 text-xs opacity-0 group-hover:opacity-100 transition-all duration-500  pointer-events-none">
+                  <span className="absolute -top-10 -left-5 mb-2 px-2 py-1 rounded bg-gray-300 text-teal-800 font-medium text-[10px] opacity-0 group-hover:opacity-100 transition-all duration-500  pointer-events-none">
                     Live Demo Link
                   </span>
                 </div>
