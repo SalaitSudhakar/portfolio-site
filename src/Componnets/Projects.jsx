@@ -79,7 +79,13 @@ const Projects = () => {
 
             {/* Text and Buttons */}
             <div className="w-full lg:w-1/2 p-3">
-              <div className="flex items-center justify-between mb-4">
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                className="flex items-center justify-between mb-4"
+              >
                 <h2 className="text-lg sm:text-2xl font-semibold text-white">
                   {project.title}
                 </h2>
@@ -91,11 +97,23 @@ const Projects = () => {
                 >
                   <FaLink /> <span>Demo</span>
                 </a>
-              </div>
-              <p className="sm:text-lg text-gray-200 mb-4">
+              </motion.div>
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                className="sm:text-lg text-gray-200 mb-4"
+              >
                 {project.description}
-              </p>
-              <p className="text-xs mb-4 ">
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                className="text-xs mb-4 "
+              >
                 {project.techStack.map((stack, index) => (
                   <span
                     key={index}
@@ -104,8 +122,15 @@ const Projects = () => {
                     {stack}
                   </span>
                 ))}
-              </p>
-              <div className="flex gap-4">
+              </motion.p>
+              <motion.div
+                
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+                className="flex gap-4"
+              >
                 <a
                   href={project.frontEndCode}
                   target="_blank"
@@ -122,7 +147,7 @@ const Projects = () => {
                 >
                   Backend Code
                 </a>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         ))}

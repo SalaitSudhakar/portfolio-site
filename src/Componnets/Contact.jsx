@@ -39,7 +39,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-custom-dark-blue px-4 md:px-5 lg:px-0 py-24">
+    <section
+      id="contact"
+      className="bg-custom-dark-blue px-4 md:px-5 lg:px-0 py-24"
+    >
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +56,13 @@ const Contact = () => {
         </span>
       </motion.h1>
 
-      <div className="max-w-2xl mx-auto flex flex-col px-3 md:px-0 md:flex-row gap-5 md:gap-10">
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        viewport={{ once: true }}
+        className="max-w-2xl mx-auto flex flex-col px-3 md:px-0 md:flex-row gap-5 md:gap-10"
+      >
         <form onSubmit={handleSubmit} className="w-full space-y-4">
           <input
             type="text"
@@ -83,7 +92,9 @@ const Contact = () => {
             required
           />
 
-          {successMsg && <p className="text-teal-500 my-3 text-center">{successMsg}</p>}
+          {successMsg && (
+            <p className="text-teal-500 my-3 text-center">{successMsg}</p>
+          )}
 
           <div className="flex items-center justify-center">
             <button
@@ -94,7 +105,7 @@ const Contact = () => {
             </button>
           </div>
         </form>
-      </div>
+      </motion.div>
     </section>
   );
 };
