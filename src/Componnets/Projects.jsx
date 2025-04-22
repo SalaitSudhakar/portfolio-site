@@ -103,7 +103,7 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-                className="sm:text-lg text-gray-200 mb-4"
+                className="text-sm sm:text-lg text-gray-200 mb-3 sm:mb-4"
               >
                 {project.description}
               </motion.p>
@@ -112,12 +112,12 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-                className="text-xs mb-4 "
+                className="text-[10px] sm:text-xs mb-3 sm:mb-4 "
               >
                 {project.techStack.map((stack, index) => (
                   <span
                     key={index}
-                    className="inline-flex p-1.5 font-medium bg-white/20 text-white/80 rounded-full m-1 ml-0"
+                    className="inline-flex p-1.5 font-medium bg-white/20 text-white/80 rounded-full m-1 my-0.5 ml-0"
                   >
                     {stack}
                   </span>
@@ -129,13 +129,13 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-                className="flex gap-4"
+                className="flex gap-3 sm:gap-4"
               >
                 <a
                   href={project.frontEndCode}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className=" border border-teal-500 text-sm sm:text-base text-teal-500 hover:box-glow hover:bg-teal-500 font-medium cursor-pointer hover:text-gray-800 px-4 py-2 rounded-lg  transition duration-300"
+                  className=" border border-teal-500 text-xs sm:text-base text-teal-500 hover:box-glow hover:bg-teal-500 font-medium cursor-pointer hover:text-gray-800 px-4 py-2 rounded-lg  transition duration-300"
                 >
                   Frontend Code
                 </a>
@@ -143,7 +143,7 @@ const Projects = () => {
                   href={project.frontEndCode}
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="cursor-pointer text-sm sm:text-base hover:box-glow bg-teal-500 text-gray-800 font-medium  px-4 py-2 rounded-lg hover:bg-transparent hover:border hover:border-teal-500 hover:text-teal-500  transition duration-300"
+                  className="cursor-pointer text-xs sm:text-base hover:box-glow bg-teal-500 text-gray-800 font-medium  px-4 py-2 rounded-lg hover:bg-transparent hover:border hover:border-teal-500 hover:text-teal-500  transition duration-300"
                 >
                   Backend Code
                 </a>
