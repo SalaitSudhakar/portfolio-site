@@ -28,25 +28,42 @@ const About = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="flex-1  md:text-xl z-10"
           >
-            <p className="mb-4">
+            <motion.p
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              className="mb-4"
+            >
               I’m a Full Stack Developer specialized in the MERN stack (
               <span className="text-teal-400">
                 MongoDB, Express.js, ReactJS, and Node.js
               </span>
               ), with a strong foundation in HTML, CSS, JavaScript, Tailwind
-              CSS, and MySQL.
-            </p>
-            <p className="mb-4">
+              CSS, ReactJS, NodeJs, ExpressJS, MongoDB, Mongoose and MySQL.
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              className="mb-4"
+            >
               I’m passionate about building user-friendly, innovative, and
               scalable web applications that deliver seamless user experiences.
               I enjoy solving real-world problems by turning ideas into
               functional, performant solutions.
-            </p>
-            <p>
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            >
               Currently, I’m expanding my knowledge in web development and
-              seeking opportunities in companies that value creativity,
-              innovation, and tech-driven growth.
-            </p>
+              seeking opportunities in that value creativity, innovation, and
+              tech-driven growth.
+            </motion.p>
           </motion.div>
 
           {/* Image Section */}
