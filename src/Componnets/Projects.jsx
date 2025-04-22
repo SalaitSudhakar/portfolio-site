@@ -150,7 +150,7 @@ const Projects = () => {
                   Frontend Code
                 </a>
                 <a
-                  href={project.frontEndCode}
+                  href={project.backEndCode}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="cursor-pointer text-xs sm:text-base hover:box-glow bg-teal-500 text-gray-800 font-medium  px-4 py-2 rounded-lg hover:bg-transparent hover:border hover:border-teal-500 hover:text-teal-500  transition duration-300"
