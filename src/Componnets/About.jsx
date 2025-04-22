@@ -6,7 +6,7 @@ import "../App.css";
 const About = () => {
   return (
     <section id="about" className="bg-custom-gray  z-0 overflow-x-hidden py-25">
-      <div className="max-w-6xl mx-auto px-4 md:px-5 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 md:pr-3 lg:pr-0 lg:px-8">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}

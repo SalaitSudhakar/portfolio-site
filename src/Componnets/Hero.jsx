@@ -8,16 +8,19 @@ import "../App.css";
 
 const socialLinks = [
   {
+    name: "LinkedIn",
     href: "https://www.linkedin.com/in/salaitsudhakar",
     icon: FaLinkedinIn,
     ariaLabel: "LinkedIn Profile",
   },
   {
+    name: "GitHub",
     href: "https://github.com/SalaitSudhakar",
     icon: FaGithub,
     ariaLabel: "GitHub Profile",
   },
   {
+    name: "Email",
     href: "mailto:saletsudhakar@gmail.com",
     icon: MdEmail,
     ariaLabel: "Email Contact",
@@ -33,7 +36,7 @@ const Hero = () => {
       {/* Left Content - Animated */}
       <div className="flex flex-col flex-1 gap-2 leading-loose tracking-wide">
         <motion.p
-          className="text-xl sm:text-2xl mb-2 font-medium"
+          className="text-xl lg:text-2xl mb-2 font-medium"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -43,7 +46,7 @@ const Hero = () => {
         </motion.p>
 
         <motion.h1
-          className="text-4xl sm:text-5xl mb-2 font-bold"
+          className="text-4xl lg:text-5xl mb-2 font-bold"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -53,18 +56,18 @@ const Hero = () => {
         </motion.h1>
 
         <motion.div
-          className="text-4xl sm:text-5xl font-bold min-h-[3rem] sm:min-h-[4rem]"
+          className="text-4xl lg:text-5xl font-bold min-h-[3rem] sm:min-h-[4rem]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <span className="text-4xl sm:text-5xl">I'm a </span>
+          <span className="text-4xl lg:text-5xl">I'm a </span>
           <span className="text-teal-500">MERN Stack Developer</span>
         </motion.div>
 
         <motion.p
-          className="sm:text-lg tracking-wide text-gray-300"
+          className="lg:text-lg tracking-wide text-gray-300"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
@@ -74,23 +77,32 @@ const Hero = () => {
         </motion.p>
 
         <motion.div
-          className="flex gap-6 my-5 flex-1"
+          className="flex gap-6 flex-1 my-6"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
           viewport={{ once: true }}
         >
           {socialLinks.map((link, index) => (
-            <a
+            <motion.div
               key={index}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.ariaLabel}
-              className="p-2 rounded-full border border-teal-500 text-teal-500 bg-transparent hover:box-glow transition-all duration-300 hover:custom-bg-teal hover:text-gray-700"
+              className="relative group p-2 cursor-pointer border border-teal-500 rounded-full bg-transparent hover:box-glow transition-all duration-300 hover:custom-bg-teal flex items-center justify-center"
             >
-              <link.icon size={23} />
-            </a>
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.ariaLabel}
+                className="text-teal-500 group-hover:text-gray-700"
+              >
+                <link.icon size={23} />
+              </a>
+
+              {/* Tooltip */}
+              <span className="absolute bottom-full mb-2 px-2 py-1 rounded bg-white/70 text-gray-800 text-xs opacity-0 group-hover:opacity-100 transition-all duration-500  pointer-events-none">
+                {link.name}
+              </span>
+            </motion.div>
           ))}
         </motion.div>
 
