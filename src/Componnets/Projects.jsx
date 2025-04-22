@@ -89,15 +89,24 @@ const Projects = () => {
                 <h2 className="text-lg sm:text-2xl font-semibold text-white">
                   {project.title}
                 </h2>
-                <a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="flex items-center justify-center gap-2 cursor-pointer text-sm sm:text-base bg-teal-500 box-glow text-gray-800 font-medium px-3 sm:px-4 py-2 rounded-lg hover:bg-transparent hover:border hover:border-teal-500 hover:text-teal-500 transition duration-300"
-                >
-                  <FaLink /> <span>Demo</span>
-                </a>
+                {/* Demo Link */}
+                <div className="group relative">
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className=" flex items-center justify-center gap-2 cursor-pointer text-sm sm:text-base bg-teal-500 box-glow text-gray-800 font-medium px-3 sm:px-4 py-2 rounded-lg hover:bg-transparent hover:border hover:border-teal-500 hover:text-teal-500 transition duration-300"
+                  >
+                    <FaLink /> <span>Demo</span>
+                  </a>
+                  {/* Tooltip */}
+                  <span className="absolute bottom-full mb-2 px-2 py-1 rounded bg-white/70 text-gray-800 text-xs opacity-0 group-hover:opacity-100 transition-all duration-500  pointer-events-none">
+                    Live Demo Link
+                  </span>
+                </div>
               </motion.div>
+
+              {/* Project Description */}
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -123,8 +132,9 @@ const Projects = () => {
                   </span>
                 ))}
               </motion.p>
+
+              {/* Code Buttons */}
               <motion.div
-                
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
