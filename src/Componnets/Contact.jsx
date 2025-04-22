@@ -12,6 +12,7 @@ const Contact = () => {
   const [successMsg, setSuccessMsg] = useState("");
 
   const handleChange = (e) => {
+    console.log(formData);
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
@@ -23,12 +24,19 @@ const Contact = () => {
     const { name, subject, message } = formData;
 
     if (name && subject && message) {
-      const mailtoLink = `mailto:your-email@example.com?subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(`Hi, I am: ${name}\n\n${message}`)}`;
+      const mailtoLink = `mailto:${
+        import.meta.env.VITE_MY_EMAIL
+      }?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+        `Hi, Salait 👋!\n I am ${name}.\n\n${message}`
+      )}`;
       window.location.href = mailtoLink;
       setSuccessMsg("Wait for mail to open!");
-      setFormData({ message: "" });
+
+      // Only reset the message field, keeping name and subject
+      setFormData((prevData) => ({
+        ...prevData,
+        message: "",
+      }));
 
       setTimeout(() => {
         setSuccessMsg("");

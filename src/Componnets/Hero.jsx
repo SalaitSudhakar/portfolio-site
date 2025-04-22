@@ -21,7 +21,7 @@ const socialLinks = [
   },
   {
     name: "Email",
-    href: "mailto:saletsudhakar@gmail.com",
+    href: `mailto:${import.meta.env.VITE_MY_EMAIL}`,
     icon: MdEmail,
     ariaLabel: "Email Contact",
   },
