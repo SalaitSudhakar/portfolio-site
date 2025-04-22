@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-const Navbar = () => {
-  const [activeSection, setActiveSection] = useState("home");
+const Navbar = ({ activeSection, setActiveSection }) => {
+ 
   const [hamburgerClicked, setHamburgerClicked] = useState(false);
 
   const navLinks = ["home", "about", "skills", "projects", "contact"];
@@ -40,7 +40,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }); // Include activeSection in dependencies
+  }); 
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-custom-dark-blue shadow-md shadow-white/20">
@@ -89,8 +89,8 @@ const Navbar = () => {
 
         {/* Hamburger Menu Dropdown */}
         <div
-          className={`sm:hidden absolute top-full left-0 right-0 bg-custom-dark-blue shadow-xl shadow-white/5 overflow-hidden transition-all duration-500 transform  ${
-            hamburgerClicked ? "translate-x-0 " : " -translate-x-full"
+          className={`sm:hidden absolute top-full left-0 right-0 bg-custom-dark-blue shadow-xl shadow-white/5 overflow-hidden transition-all duration-500  ${
+            hamburgerClicked ? "translate-x-0" : " translate-x-full"
           }`}
         >
           <div className="flex flex-col gap-3 m-4">

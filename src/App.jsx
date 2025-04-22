@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Componnets/Navbar";
 import Hero from "./Componnets/Hero";
 import "./App.css";
@@ -9,10 +9,12 @@ import Footer from './Componnets/Footer'
 import MoveToTop from "./Componnets/MoveToTop";
 
 const App = () => {
+   const [activeSection, setActiveSection] = useState("home");
+
   return (
-    <div className="bg-custom-dark-blue min-h-screen text-white overflow-x-hidden">
-      <Navbar />
-      <MoveToTop />
+    <div className="relative bg-custom-dark-blue min-h-screen text-white overflow-x-hidden">
+      <Navbar activeSection={activeSection} setActiveSection={setActiveSection}/>
+      <MoveToTop activeSection={activeSection}/>
       <Hero />
       <About />
       <Skills />
