@@ -103,14 +103,20 @@ const Contact = () => {
             <p className="text-teal-500 my-3 text-center">{successMsg}</p>
           )}
 
-          <div className="flex items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="flex items-center justify-center"
+          >
             <button
               type="submit"
               className="flex items-center justify-center gap-2 bg-teal-500 cursor-pointer text-gray-800 px-6 py-2 rounded-full border border-transparent hover:border-teal-500 hover:text-white box-glow hover:null-box-glow hover:bg-transparent transition-all duration-300 animate-wiggle-down"
             >
               <span>Send Email</span> <IoSendSharp />
             </button>
-          </div>
+          </motion.div>
         </form>
       </motion.div>
     </section>
