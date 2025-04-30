@@ -89,8 +89,8 @@ const Navbar = ({ activeSection, setActiveSection }) => {
 
         {/* Hamburger Menu Dropdown */}
         <div
-          className={`sm:hidden absolute top-full left-0 right-0 bg-custom-dark-blue shadow-xl shadow-white/5 overflow-hidden transition-all duration-500  ${
-            hamburgerClicked ? "translate-x-0" : " translate-x-full"
+          className={`sm:hidden absolute top-full left-0 right-0 bg-custom-dark-blue shadow-xl shadow-white/5 overflow-hidden transition-all duration-300  ${
+            hamburgerClicked ? "max-h-96" : " max-h-0"
           }`}
         >
           <div className="flex flex-col gap-3 m-4">
