@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import passwordManagerImage from "../assets/project/password-manager.png";
-import hostelManagementImage from "../assets/project/hostel-management.png";
+import chatAppImage from "../assets/project/chat-app.png";
 import authAppImage from "../assets/project/auth-app.png";
 import { FaLink } from "react-icons/fa";
 
@@ -17,15 +17,14 @@ const projectData = [
     backEndCode: "https://github.com/SalaitSudhakar/password-manager-backend",
   },
   {
-    title: "Hostel Management App",
-    image: hostelManagementImage,
-    description:
-      "A full-stack web application for booking hostels with PayPal payments and Role-Based Access Control (RBAC) for users, admins, and hostel owners.",
-    techStack: ["MongoDB", "Express.js", "React.js", "Node.js", "Paypal API"],
-    demoLink: "https://hostel-management-mern.netlify.app",
-    frontEndCode:
-      "https://github.com/SalaitSudhakar/Hostel-Management-Frontend",
-    backEndCode: "https://github.com/SalaitSudhakar/Hostel-Management-backend",
+    title: "Chat App",
+    image: chatAppImage,
+     description:
+      "A real-time chat application with socket.io allowing users to communicate instantly in private chats with online presence.",
+    techStack: ["MongoDB", "Express.js", "React.js", "Node.js", "Socket.IO"],
+    demoLink: "https://chatting-app-mern.netlify.app", 
+    frontEndCode: "https://github.com/SalaitSudhakar/chat-app-client",
+    backEndCode: "https://github.com/SalaitSudhakar/chat-app-server",
   },
   {
     title: "Password Reset Flow App",
